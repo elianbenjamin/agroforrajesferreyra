@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from '../Footer/Footer'
 import styles from './Home.module.css'
 
 
