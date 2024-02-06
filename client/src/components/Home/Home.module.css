@@ -1,0 +1,21 @@
+.container{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+/* .img{
+   
+    
+    
+} */
+.text{
+    font-weight: 700;
+    background-color: rgba(243, 242, 241, 0.219);
+    margin: 0%;
+}

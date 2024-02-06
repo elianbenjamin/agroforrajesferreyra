@@ -26,9 +26,16 @@ align-items: center;
 }
 .logoName{
     text-transform: uppercase;
-    color: #fff;
+    color: #0a0a0a;
     font-weight: 700;
     font-size: 18px;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
 }
-
+.btn{
+    color: #215c1cc9;
+    box-shadow: 9px 14px 6px 0px #0000001A;
+    background: linear-gradient(180deg, rgba(249, 249, 249, 0.15) 0%, rgba(249, 249, 249, 0.03) 100%);
+    border-radius: 6px;
+    height: 28px;
+    width: 127px;
+}
