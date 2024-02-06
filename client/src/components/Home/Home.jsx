@@ -1,9 +1,13 @@
 import React from 'react'
+import Footer from '../Footer/Footer'
 
-function Home() {
+
+const Home = () => {
   return (
     <div>
-      <h1>holaaaa</h1>
+      <button>Inicio</button>
+     
+      <Footer />
     </div>
   )
 }
