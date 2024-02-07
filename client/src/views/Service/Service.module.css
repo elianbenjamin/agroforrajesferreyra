@@ -1,9 +1,35 @@
 .container{
-    background-color: black;
-    position: relative;
+    background-image: url("https://imgs.search.brave.com/_Q8Oi_YF1rFJp6Dss9vJgigHRrRb7tuY1zTE1jL3Q7E/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZXJ0/aWZpZWRodW1hbmVs/YXRpbm8ub3JnL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIwLzA2/L0VzcGVjaWVzLWZv/cnJhamVyYXMtcHVl/ZGVuLXNlci11bmEt/c29sdWNpb24tcGFy/YS1tZWpvcmFyLWxh/LWRpZXRhLWRlbC1n/YW5hZG8tYm92aW5v/LWVuLWludmllcm5v/LmpwZWc");
+    background-size: cover;
+    background-position:center ;
 }
-.h1{
+.h2{
     height: 10px;
     font-size: 32px;
-    
+}
+
+.cuadroServicios{
+    display: flex; 
+    flex-direction: row;
+    align-items: stretch;
+    padding-bottom: 10%;
+    margin-top: 7%;
+}
+
+.cuadroServicio{
+    margin: 2% 10% 2% 10%;
+    height: 15%;
+    border: 5px whitesmoke double;
+    border-radius: 25%;
+    background-color: rgba(128, 128, 128, 0.349);
+}
+
+.text{
+    padding: 10px;
+    text-shadow:
+    1px 1px 2px whitesmoke,
+    0 0 1em whitesmoke,
+    0 0 0.2em whitesmoke;
+    width: 60%;
+    margin: 2% 20% 2% 20%;
 }

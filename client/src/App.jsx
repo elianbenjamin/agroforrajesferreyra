@@ -4,6 +4,7 @@ import { Routes, Route} from 'react-router-dom'
 import NavBar from './components/Navbar/NavBar'
 import Footer from './components/Footer/Footer'
 import About from './views/About/About'
+import Service from './views/Service/Service'
 
 
 
@@ -16,7 +17,7 @@ function App() {
     <div className='App'>
        <NavBar />
        <Home/>
-       <About/>
+       <Service/>
        
     
     </div>
