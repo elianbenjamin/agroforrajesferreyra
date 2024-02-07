@@ -1,19 +1,18 @@
 .container{
     background-image: url("https://imgs.search.brave.com/_Q8Oi_YF1rFJp6Dss9vJgigHRrRb7tuY1zTE1jL3Q7E/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZXJ0/aWZpZWRodW1hbmVs/YXRpbm8ub3JnL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIwLzA2/L0VzcGVjaWVzLWZv/cnJhamVyYXMtcHVl/ZGVuLXNlci11bmEt/c29sdWNpb24tcGFy/YS1tZWpvcmFyLWxh/LWRpZXRhLWRlbC1n/YW5hZG8tYm92aW5v/LWVuLWludmllcm5v/LmpwZWc");
     background-size: cover;
-    background-position:center ;
+    background-position: center ;
+    height: 100vh;
 }
 .h2{
-    height: 10px;
-    font-size: 32px;
+    margin:0;
 }
-
 .cuadroServicios{
     display: flex; 
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
     padding-bottom: 10%;
-    margin-top: 7%;
+
 }
 
 .cuadroServicio{

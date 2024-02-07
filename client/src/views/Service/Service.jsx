@@ -3,8 +3,8 @@ import styles from './Service.module.css'
 
 const Service = () => {
   return (
-    <div className={styles.container}>
-      <h2 className={styles.h2}>Nuestros Services</h2>
+    <div className={styles.container} id="services">
+       <p className={styles.h2}>Nuestros Services</p> 
       <div className={styles.cuadroServicios}>
         <div className={styles.cuadroServicio}>
           <h4 className={styles.text}>Picado de forraje</h4>
