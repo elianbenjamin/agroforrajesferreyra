@@ -18,6 +18,7 @@ function App() {
        <NavBar />
        <Home/>
        <Service/>
+       <Footer/>
        
     
     </div>

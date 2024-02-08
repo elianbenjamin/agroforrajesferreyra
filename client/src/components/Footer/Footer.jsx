@@ -1,33 +1,63 @@
-import React from 'react';
-import styles from './Footer.module.css';
-import { NavLink } from 'react-router-dom';
+import {useState  } from "react";
+import styles from "./Footer.module.css";
+import { NavLink } from "react-router-dom";
+import linkedin from '../../assets/image/Linkediiiin.png'
+import instagram from '../../assets/image/instagram-.png'
+import whatsApp from '../../assets/image/whatsapp.png'
 
 const Footer = () => {
+
+  const [whatsappNumber] = useState(3329561698);
+
+  const handleHireMeClick = () => {
+    window.open(`https://wa.me/${whatsappNumber}`, "_blank");
+  };
+
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footerContent}>
+    <div className={styles.container}>
+      <div className={styles.containerH2}>
+        <h2 className={styles.h2}>
+          Mantengámonos en contacto <hr className={styles.hr} />
+        </h2>
+      </div>
+      <div className={styles.comtainerSpan}>
+        <p className={styles.span}>
+          Estamos disponibles para responder a sus consultas. <br /> sobre
+          cualquiera de nuestros servicios.
+        </p>
+      </div>
+
+      <div className={styles.Ubi}>
+        <p className={styles.ubicacion}>📍Villa Mercedes, San Luis.</p>
+        <p className={styles.dudas}>💬Háblenos de sus dudas.</p>
+        <p className={styles.contacta}>🤝🏻Contacta nuestro servicios.</p>
+      </div>
+      <div className={styles.redes}>
+        <a href="https://www.linkedin.com/in/agroforrajes-ferreyra/" target="_blank">
+           <img src={linkedin} alt="" />
+        </a>
+        <a href="https://www.instagram.com/agroforrajesferreyra/"  target="_blank">
+          <img src={instagram} alt="" />
+        </a>
         
-        <p>copyright &copy; 2023 - App FullStack - Developed by Elián. All rights reserved. </p>
-        <p>This app uses data provided by RAWG VideoGames API.</p>
-         
+          <img onClick={handleHireMeClick} src={whatsApp} alt="" />
+       
+      </div>
+      <div className={styles.comunicarse}>
+      <p className={styles.celular}>Contastos: </p>
+      <p className={styles.celular}>Francisco Ferreyra TEL: +54 3329561698</p>
+      <p className={styles.celular}>Carlos Ferreyra TEL: +54 3329629247</p>
+      <p className={styles.celular}>Adrian Ferreyra TEL: +54 3329561687</p>
+      <p className={styles.celular}>Fernando Ferreyra TEL: +54 3329629242</p>
 
-        
-    
-        <NavLink to={'https://www.linkedin.com/in/elian-rivera-619297239/'} target="_blank">
-        <img className={styles.img} src="https://imgs.search.brave.com/IgX9_wXgeDo05kR8Z-Z4vNixhO82oaQq1fGfGqrmsRQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbi1pY29ucy5j/b20vaWNvbnMyLzEw/OTkvUE5HLzUxMi8x/NDg1NDgyMTk5LWxp/bmtlZGluXzc4NjY3/LnBuZw" alt="Linkedin" />
-        </NavLink> 
-
-        <NavLink to={'https://github.com/elianbenjamin'} target="_blank">
-        <img  className={styles.img2} src="https://github.com/fluidicon.png" alt="Git hub" />
-        </NavLink>
-
-          <NavLink to={'https://rawg.io/'} target="_blank">
-          <img className={styles.img3} src="https://imgs.search.brave.com/ulFA5Ct-9ugPBIvJPY2FK7KYRaUugKLzPvQ_uPQrcPM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/djIvMSpCcE45UUFR/VG44OTJCZUp2S3E3/Rk1RLnBuZw" alt="Rawg" />
-          </NavLink>
 
       </div>
-    </footer>
+
+      <div className={styles.copy}>
+        <p className={styles.copyyy}>Copyright © 2006-2024 Agroforrajes Ferreyra S.R.L</p>
+      </div>
+    </div>
   );
-}
+};
 
 export default Footer;

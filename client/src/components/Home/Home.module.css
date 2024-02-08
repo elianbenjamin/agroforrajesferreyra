@@ -6,20 +6,33 @@
     align-items: center;
     justify-content: center;
     z-index: 0;
-    
 
     background-image: url(../../assets/image/fotodearriba.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    
 }
-
-.text{
-    font-weight: 700;
-    background-color: rgba(243, 242, 241, 0.219);
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);  
+    z-index: -1;
+}
+.textTitulo{
+    font-size: 50px;
     margin: 0%;
+    color: white;
 }
-
+.textAno, .textCalidad{
+    font-size: 28px;
+    margin: 0px;
+    color: white;
+}
 
 
 .btnwhat {
@@ -38,5 +51,17 @@
 }
 
 
+.arrow{
+  position: relative;
+  top: 350px;
+  transform: translateX(-50%); 
+  z-index: 1000;
+  background: transparent;
 
+}
 
+.imagen {
+    height: 30px;
+    width: 30px;
+    background: transparent;
+}
