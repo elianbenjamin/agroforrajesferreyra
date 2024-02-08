@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import styles from "./NavBar.module.css";
 import logo from "../../assets/image/300.png";
 import linkedin from "../../assets/image/Linkediiiin.png";
@@ -6,9 +6,44 @@ import instagram from "../../assets/image/instagram-.png";
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      // Set a threshold value based on your design to determine when to hide/show
+      const threshold = 100;
+
+      setIsScrolled(scrollPosition > threshold);
+    };
+
+    // Attach the event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Detach the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+
+  }, []);
+  const navStyle = {
+    height: isScrolled ? "100px" : "131px", 
+    transition: "height 0.3s ease", 
+  };
+
+  const titleStyle = {
+    transition: "transform 0.3s ease",
+    transform: isScrolled ? "translateY(-31px)" : "translateY(0)",
+  };
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <nav className={styles.nav}>
-      <div className={styles.containeremail}>
+    <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ""}`} style={navStyle}>
+      <div className={`${styles.containeremail} ${isScrolled ? styles.hide : ""}`}>
         <a
           href="mailto:agroforrajesferreyra@gmail.com"
           className={styles.email}
@@ -39,36 +74,39 @@ const NavBar = () => {
           </a>
         </div>
       </div>
-      <div className={styles.logo}>
+      <div className={styles.logo} style={titleStyle}>
         <div className={styles.divImg}>
           <img className={styles.logoimage} src={logo} alt="" />
         </div>
         AGROFORRAJES FERREYRA S.R.L
       </div>
-      <div className={styles.secciones}>
+      <div className={styles.menuIcon} onClick={handleMenuToggle}>
+        ☰ {/* Icono de hamburguesa */}
+      </div>
+      <div className={`${styles.secciones} ${isMenuOpen ? styles.menuOpen : ""}`} style={titleStyle}>
         <ul className={styles.ul}>
           <li className={styles.li}>
-            <a className={styles.a} href="#">
+            <a className={styles.a} href="#" onClick={handleMenuToggle}>
               INICIO
             </a>
           </li>
           <li className={styles.li}>
-            <a className={styles.a} href="#">
+            <a className={styles.a} href="#" onClick={handleMenuToggle}>
               SERVICIOS
             </a>
           </li>
           <li className={styles.li}>
-            <a className={styles.a} href="#">
+            <a className={styles.a} href="#" onClick={handleMenuToggle}>
               HISTORIA
             </a>
           </li>
           <li className={styles.li}>
-            <a className={styles.a} href="#">
+            <a className={styles.a} href="#" onClick={handleMenuToggle}>
               GALERIA
             </a>
           </li>
           <li className={styles.li}>
-            <a className={styles.a} href="#">
+            <a className={styles.a} href="#" onClick={handleMenuToggle}>
               CONTACTENOS
             </a>
           </li>
@@ -81,105 +119,3 @@ const NavBar = () => {
 export default NavBar;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  /* <div className={styles.container}>
-  <div className={styles.navLogo}>
-            <NavLink to="/home"> 
-            <img className={styles.img} src="https://imgs.search.brave.com/smrbS6-_vAsNTRNi2of631qBFqe1zI66Mfh_9K0sG9E/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9mb3Jj/ZXJlcy5jb20uYXIv/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MDYvcGljYWRvMi0x/MzAweDg2Ny5qcGc" alt="" />
-            </NavLink>
-            <span className={styles.logoName}>Agroforrajes Ferreyra S.R.L</span>
-  </div>
-  <NavLink to={'/home'}>
-    <button className={styles.btn}>INICIO</button>
-
-  </NavLink>
-
-  <NavLink to={'/service'}>
-    <button className={styles.btn}>SERVICIOS</button>
-
-  </NavLink>
-
-  <NavLink to={'/historia'}>
-    <button className={styles.btn}>HISTORIA</button>
-
-  </NavLink>
-
-  <NavLink to={'/galeria'}>
-    <button className={styles.btn}>GALERIA</button>
-
-  </NavLink>
-
-  <NavLink to={'/contactanos'}>
-    <button className={styles.btn}>CONTACTENOS</button>
-
-  </NavLink>
-
-  
-</div> */
-}

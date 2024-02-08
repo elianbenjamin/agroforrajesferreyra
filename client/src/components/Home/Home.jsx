@@ -3,11 +3,11 @@ import {scroller} from "react-scroll"
 import styles from "./Home.module.css";
 import whatsApp from "../../assets/image/3225179_app_logo_media_popular_social_icon.png";
 import arrow from "../../assets/image/arrowwhite.png"
-
+import Service from "../../views/Service/Service";
 
 const Home = () => {
 
-  
+  /* const [loading, setLoading] = useState(true); */
 
   const [whatsappNumber] = useState(3329561698);
 
@@ -22,6 +22,9 @@ const Home = () => {
       smooth: 'easeInOutQuart'
     });
   };
+
+
+  
 
   return (
     <div className={styles.container}>
