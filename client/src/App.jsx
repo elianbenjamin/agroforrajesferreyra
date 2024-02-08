@@ -5,12 +5,14 @@ import NavBar from './components/Navbar/NavBar'
 import Footer from './components/Footer/Footer'
 import About from './views/About/About'
 import Service from './views/Service/Service'
+import { useState } from 'react'
 
 
 
 
 
 function App() {
+  const [state, setState] = useState(null);
 
 
   return (
