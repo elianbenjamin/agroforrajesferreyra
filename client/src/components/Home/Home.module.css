@@ -1,0 +1,42 @@
+.container{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    
+
+    background-image: url(../../assets/image/fotodearriba.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.text{
+    font-weight: 700;
+    background-color: rgba(243, 242, 241, 0.219);
+    margin: 0%;
+}
+
+
+
+.btnwhat {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    max-width: 95vw;
+    border-radius: calc(var(--s)/2);
+    box-shadow: 1px 6px 24px 0 rgba(7,94,84,.24);
+    cursor: pointer;
+    transition: background-color .2s linear;
+}
+.img{
+    height: 60px;
+    width: 60px;
+}
+
+
+
+
